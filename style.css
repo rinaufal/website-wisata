@@ -1,0 +1,97 @@
+
+:root {
+    --green-dark: #fc0808; /* Warna Hijau Tua untuk header video */
+    --green-primary: #fc0808; /* Warna Navbar */
+    --green-text: #fc0808; /* Warna teks utama */
+}
+
+/* Header / Hero Section Styling */
+.hero-section {
+    /* Ganti dengan URL gambar latar belakang Anda */
+    background-image: url('bgwisata.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Overlay gelap samar */
+    z-index: -1;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--green-primary) !important; 
+}
+
+/* Teks Utama */
+h2.text-success {
+    color: var(--green-text) !important;
+    font-weight: bold;
+}
+
+/* Video Card Styling */
+.video-card .card-header {
+    background-color: var(--green-dark) !important;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+}
+
+.youtube-placeholder {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-card .embed-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Rasio 16:9 */
+    height: 0;
+}
+
+.video-card .embed-responsive img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.video-overlay i {
+    font-size: 3rem;
+    pointer-events: none; /* Agar klik diteruskan ke overlay */
+}
+
+.video-overlay p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+}
